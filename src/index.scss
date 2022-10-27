@@ -5,6 +5,7 @@ $MainSection-bg--color:#ffff;
 $text-color: #101828;
 $link-bg--color :#EAECF0;
 $text-color--grey:#667085;
+$color--grey-2:#98A2B3;
 
 
 
@@ -29,7 +30,11 @@ body {
   
   
 }
-
+// @media (max-width:37.5em){
+//  body{
+//  overflow-y: hidden;
+//   }
+// }
 // code {
 //   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 //     monospace;
