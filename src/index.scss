@@ -19,6 +19,13 @@ $color--grey-2:#98A2B3;
 *{
   box-sizing: border-box;
 }
+a{
+  text-decoration: none;
+  &:hover,
+  &:active{
+    color: $color--grey-2;
+  }
+}
 
 body {
   // margin: 0;
@@ -30,11 +37,7 @@ body {
   
   
 }
-// @media (max-width:37.5em){
-//  body{
-//  overflow-y: hidden;
-//   }
-// }
+
 // code {
 //   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 //     monospace;

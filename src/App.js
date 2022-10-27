@@ -37,10 +37,14 @@ function App() {
       </div>
     </section>
     <section className='SocialMedia-section'>
-      <a href='https://github.com/IAMMORBOR'>
-        <img className='SocialMedia-section--slack' src={slack} alt='slack--icon'/>
+   
+    <a href='urltoslack'>
+     <img className='SocialMedia-section--slack' src={slack} alt='slack--icon'/>
       </a>
+      <a href='https://github.com/IAMMORBOR'>
         <BsGithub className='SocialMedia-section--github' />
+      </a>
+      
     </section>
     <div className='empty'></div>
     <footer className='footer-section'>
