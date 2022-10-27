@@ -1,0 +1,36 @@
+// FONTS AND COLOR VARIABLES 
+$Main-font:'Inter' sans-serif;
+$bg-color: #F4F5F7;
+$MainSection-bg--color:#ffff;
+$text-color: #101828;
+$link-bg--color :#EAECF0;
+$text-color--grey:#667085;
+
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    
+}
+*{
+  box-sizing: border-box;
+}
+
+body {
+  // margin: 0;
+  font-family:'Inter',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  
+}
+
+// code {
+//   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+//     monospace;
+// }
