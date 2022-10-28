@@ -1,7 +1,7 @@
-@import '../index.scss';
+@import '../../index.scss';
 
 
-.button-section{
+.Links-section{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,9 +33,17 @@
   
 }
 //MEDIA QUERY
+@media (max-width:56.25em){
+    .btn{
+        width: 47rem;
+        }
+       
+}
+
 @media (max-width:37.5em){
     .btn{
-    width: 19rem;
+    // width: 19rem;
+     width: 21rem;
     }
    
 }
