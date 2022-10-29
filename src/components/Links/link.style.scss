@@ -67,13 +67,17 @@
 
 //MEDIA QUERY
 @media (max-width:56.25em){
-    .btn{
+    .Data-links{
         width: 47rem;
     }     
 }
 @media (max-width:37.5em){
-    .btn{
+    .Data-links{
      width: 21rem;
+
+     &:hover .tooltip{
+        translate: 350px 20px; 
+    }
     }
    
 }
