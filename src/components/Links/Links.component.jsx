@@ -11,7 +11,7 @@ const LinkData =()=>{
             <a className="Data-links" href={socialLink.linkTo} id={socialLink.linkID}>{socialLink.linkText}
             <span className="tooltip">
               <div className="tooltip--heading">
-               <b>  {socialLink.HoverTextHeading}</b>
+               <b> {socialLink.HoverTextHeading}</b>
               </div>
               <div className="tooltip--Body">
                  {socialLink.HoverText}

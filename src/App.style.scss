@@ -114,22 +114,16 @@
     height: 3px;
     background-color:$link-bg--color;
     margin: auto;
-
 }
-
-
 //MEDIA QUERY
 @media (max-width:56.25em){
 
     .MainSection{
         width: 100vw;
-       
         &-Nav{
-          
-    
             &--icon{
                 top: 2.5rem;
-                left: 35rem;
+                left: 39rem;
             }
             &--desktop{
                 display: none;
@@ -145,13 +139,10 @@
     .empty{
         width: 35rem;
         margin-bottom: 2rem;
-    
     }
     .SocialMedia-section{
         width: 18.7rem;
-
     }
-   
    }
 
 @media (max-width:37.5em){
@@ -160,7 +151,7 @@
         &-Nav{
             &--icon{
                 top: 2.5rem;
-                left: 18rem;
+                left: 20rem;
             }
             &--desktop{
                 display: none;

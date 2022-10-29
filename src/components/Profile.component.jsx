@@ -11,7 +11,6 @@ const UserProfile=()=>{
                 <h4 id='twitter'>@datgirlMORBOR</h4>
             </div>
       </div>
-      
     )
 }
 export default UserProfile;

@@ -13,7 +13,7 @@
     font-weight: 500;
     font-family: $Main-font;
     height: 76px;
-    width: 57.6rem;
+    width: 59rem;
     background-color: $link-bg--color;
     letter-spacing: 0.2px;
     border-radius: 8px;
@@ -27,9 +27,7 @@
 
     &:hover{
        box-shadow: 3px 2px 3px 2px $color--grey-2;
-       
     }
-
     & .tooltip{
         visibility: hidden;
         width: 20rem;
@@ -68,16 +66,18 @@
 //MEDIA QUERY
 @media (max-width:56.25em){
     .Data-links{
-        width: 47rem;
-        translate: 250px 20px; 
+        width: 38rem;
+        &:hover .tooltip{
+            translate: 190px 25px; 
+        }
     }     
 }
 @media (max-width:37.5em){
     .Data-links{
-     width: 21rem;
+     width: 24rem;
 
      &:hover .tooltip{
-        translate: 250px 20px; 
+        translate: 8px 70px; 
     }
     }
    
