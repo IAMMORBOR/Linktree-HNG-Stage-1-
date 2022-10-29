@@ -1,16 +1,28 @@
-import SocialLink from "./link.component";
+import DATA from "../../DATA/Data.js";
+import './link.style.scss';
 
-const Links =()=>{
-    return(
-        <div className='Links-section' >
-        <SocialLink btnid ='zuri' link='https://twitter.com/IAMMORBOR'>Twitter Link</SocialLink>
-        <SocialLink btnid ='btn_zuri' link='https://training.zuri.team/'>Zuri Team</SocialLink>
-        <SocialLink btnid ='Books' link='http://books.zuri.team'>Zuri Books</SocialLink>
-        <SocialLink btnid ='books_python' link='https://books.zuri.team/'>Python Books </SocialLink>
-        <SocialLink btnid ='Pitch' link='https://background.zuri.team'>Background check for Coders</SocialLink>
-        <SocialLink btnid ='book_design' link='https://books.zuri.team/design-rules'>Design Books</SocialLink>
-      </div>
+const LinkData =()=>{
 
-    )
+  return (
+    <div className="Links-section">
+      {DATA.map((socialLink)=>{
+        return (
+          <div key={socialLink.key}>
+            <a className="Data-links" href={socialLink.linkTo} id={socialLink.linkID}>{socialLink.linkText}
+            <span className="tooltip">
+              <div className="tooltip--heading">
+               <b>  {socialLink.HoverTextHeading}</b>
+              </div>
+              <div className="tooltip--Body">
+                 {socialLink.HoverText}
+              </div>
+            </span>
+            </a>
+          </div>
+        )
+      })}
+    </div>
+
+  );
 }
-export default Links;
+export default LinkData;

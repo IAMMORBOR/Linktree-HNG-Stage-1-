@@ -7,42 +7,72 @@
     justify-content: center;
     align-items: center;
 }
-.btn{
+// LINK AND TOOLTIP STYLE
+.Data-links{
     font-size: 1rem;
     font-weight: 500;
     font-family: $Main-font;
     height: 76px;
     width: 57.6rem;
     background-color: $link-bg--color;
-    color: #fff;
-    border: none;
-    // padding: 24px 32px;
     letter-spacing: 0.2px;
     border-radius: 8px;
-    color: $text-color;
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 24px;
+    position: relative;
+    color: $text-color;
 
-    // &:not(:last-child){
-    //     margin-bottom: 24px;
-    // }
+    &:hover{
+       box-shadow: 3px 2px 3px 2px $color--grey-2;
+       
+    }
 
-  
+    & .tooltip{
+        visibility: hidden;
+        width: 20rem;
+        height: max-content;
+        background-color: $color--grey-2;
+        color: #fff;
+        border-radius:0 10px;
+        padding: 10px;
+        position: absolute;
+         left: 5rem;
+        z-index: 1;
+        transition: translate .8s;
+       
+
+        &--heading{
+            font-size: 12px;
+            font-family: 300;
+            margin-bottom: 10px;
+        }
+
+        &--Body{
+            font-size: 13px;
+            font-family: 300;
+            margin-bottom: 10px;
+        }
+    }
+
+    &:hover .tooltip{
+        visibility: visible;
+        translate: 440px 30px; // 1st value is the mov frm left to right , 2nd value is the mov frm top to Bottom
+        z-index: 1;
+    }
 }
+// THIS THE END OF THE TOOLTIP STYLING AND THE BEGINNING OF THE MEDIA QUERY 
+
 //MEDIA QUERY
 @media (max-width:56.25em){
     .btn{
         width: 47rem;
-        }
-       
+    }     
 }
-
 @media (max-width:37.5em){
     .btn{
-    // width: 19rem;
      width: 21rem;
     }
    

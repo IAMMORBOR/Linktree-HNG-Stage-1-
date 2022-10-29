@@ -1,12 +1,11 @@
 import './App.style.scss';
 import Footer from './components/footer-section/footer.component';
 import SocialMedia from './components/social.componet';
-import Links from './components/Links/Links.component';
+// import Li from './components/Links/Links.component';
 import UserProfile from './components/Profile.component';
 import MobileNav from './components/NavSection/MobileNav.component';
 import DesktopNav from './components/NavSection/Desktop.component';
-
-
+import LinkData from './components/Links/Links.component';
 
 function App() {
   return (
@@ -18,7 +17,7 @@ function App() {
       </nav>
       <section className='linktree-section'>
         <UserProfile/>
-          <Links/>
+        <LinkData/>
       </section>
       <SocialMedia/>
       <div className='empty'></div>
