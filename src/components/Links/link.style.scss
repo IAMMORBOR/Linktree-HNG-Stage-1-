@@ -74,10 +74,13 @@
 }
 @media (max-width:37.5em){
     .Data-links{
-     width: 24rem;
+     width: 20rem;
 
+     & .tooltip{
+        width: 15rem;
+    }
      &:hover .tooltip{
-        translate: 8px 70px; 
+        translate: 0px 70px; 
     }
     }
    
