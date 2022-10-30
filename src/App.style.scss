@@ -34,20 +34,10 @@
        border-radius: 100%;
        margin:64px 0 24px 0;
     }
-     &--twitter-section{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 1.8rem;
-
-        &--icon{
-            margin-right: 5px;
-            font-size: 1.3rem;
-        }
-    }
 }
 #twitter{
     font-size: 23px;
+    margin-bottom: 1.8rem;
 }
 #twitter,
 #slack{
@@ -56,9 +46,6 @@
     font-weight: 700;
 }
 #slack{
-    font-size: 23px;
-    letter-spacing: 1.2px;
-    margin-bottom: 6px;
     display: none;
     
 }
