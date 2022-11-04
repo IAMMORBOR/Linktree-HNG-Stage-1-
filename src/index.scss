@@ -5,9 +5,11 @@ $MainSection-bg--color:#ffff;
 $text-color: #101828;
 $link-bg--color :#EAECF0;
 $text-color--grey:#667085;
+$text-color--grey--2:#475467;
 $color--grey-2:#98A2B3;
-
-
+$btn--color: #1570EF;
+$label--color:#344054;
+$color--grey--3:#D0D5DD;
 
 *,
 *::before,
@@ -19,15 +21,6 @@ $color--grey-2:#98A2B3;
 *{
   box-sizing: border-box;
 }
-// a{
-//   text-decoration: none;
-//   color: $text-color;
-//   &:hover,
-//   &:active{
-//     // color: $color--grey-2;
-//     background-color: red;
-//   }
-// }
 
 body {
   // margin: 0;

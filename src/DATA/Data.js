@@ -49,6 +49,13 @@
         linkTo: "https://books.zuri.team/design-rules", 
         HoverTextHeading:'UI/UX Books',
         HoverText:'Get the best books on UI/UX principle with zero cost'
+    },
+    {
+        linkText: "Contact",
+        linkID: "contact",
+        key: 7,
+        linkTo: "/contact", 
+        HoverText:'this button will redirect you to the contact section'
     }
  ]
 export default DATA;
