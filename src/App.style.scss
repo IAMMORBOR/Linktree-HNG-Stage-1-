@@ -79,10 +79,8 @@
     justify-content: space-evenly;
     align-items: center;
     height: 8rem;
-    // width: 83.9rem;  
-    width: 100vw;
-    margin: 0 auto; 
-   
+    width: 83.9rem;  
+
     &--logo{
         width: 9.25rem;
         height: 1.2rem;
@@ -148,7 +146,6 @@
         color: $text-color--grey;
         font-size:0.8rem ;
     }
-
 }
 #message{
     height: 6.6rem;
@@ -177,7 +174,7 @@
     margin-left: 3px;
     
  }
-.name-section{
+.formField--section{
 display: flex;
 }
 #last_name--label{
@@ -221,8 +218,87 @@ label{
    font-weight: 500;
    font-family: $Main-font;
 }
+.successMessage{
+    position: absolute;
+    top:40%;
+    left:30%;
+    height: 7rem;
+    width: 25rem;
+    background-color: $bg-color;
+    box-shadow: 2px 4px 3px 2px $color--grey-2;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
 
+    &--text{
+        color: $btn--color;
+        font-family: $Main-font;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    &--subtext{
+        font-size: 0.9rem;
+        color: $text-color;
+        width: 100%;
+    }
+   &--btn{
+    background-color: $btn--color;
+    width: 3.8rem;
+    height: 2rem;
+    border: none;
+    color: $bg-color;
+    font-size: 1rem;
+    position: relative;
+    top: 0%;
+    left:85%;
+   border-radius: 5px;
+   }
+}
+// END OF CONTACT SECTION STYLYING 
 //MEDIA QUERY
+@media (max-width:75em){
+    .MainSection{
+        width: 100vw;
+        &-Nav{
+            &--icon{
+                top: 2.5rem;
+                left: 42rem;
+            }
+            &--desktop{
+                display: none;
+            }
+            &--mobile{
+                display: block;
+            }
+        }
+    }
+    .Contact-section{
+        width: 100vw;
+        padding: 64px 0px 0 0px;
+        &--containner{
+            display: flex;
+            justify-content: center;
+            // align-items: center;
+            flex-direction: column;
+             width: 90vw;
+        }
+    }
+    .footer-section{
+        width: 100vw; 
+    }
+    .empty{
+        width: 35rem;
+        margin-bottom: 2rem;
+    }
+    .SocialMedia-section{
+        width: 18.7rem;
+    }
+
+    .SocialMedia-section{
+        width: 18.7rem;
+
+    }
+}
 @media (max-width:56.25em){
     .MainSection{
         width: 100vw;
@@ -249,9 +325,23 @@ label{
     .SocialMedia-section{
         width: 18.7rem;
     }
-   }
- 
 
+    .SocialMedia-section{
+        width: 18.7rem;
+
+    }
+    .Contact-section{
+        width: 100vw;
+        padding: 64px 0px;
+
+        &--containner{
+            width: 90vw;
+        }
+    }
+    .successMessage{
+        left:20%;
+    }
+   }
 @media (max-width:37.5em){
     .MainSection{
         width:100vw;
@@ -288,5 +378,16 @@ label{
     .SocialMedia-section{
         width: 18.7rem;
 
+    }
+    .Contact-section{
+        width: 100vw;
+        padding: 64px 0px;
+
+        &--containner{
+            width: 90vw;
+        }
+    }
+    .formField--section{
+        display: block;
     }
 }

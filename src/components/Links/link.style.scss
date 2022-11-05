@@ -64,6 +64,16 @@
 // THIS THE END OF THE TOOLTIP STYLING AND THE BEGINNING OF THE MEDIA QUERY 
 
 //MEDIA QUERY
+@media (max-width:75em){
+    .Data-links{
+        width:90vw;
+        margin: 6px auto;
+        &:hover .tooltip{
+            translate: 100px 20px; 
+        }
+    }     
+}
+
 @media (max-width:56.25em){
     .Data-links{
         width: 38rem;

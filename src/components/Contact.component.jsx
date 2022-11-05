@@ -2,7 +2,7 @@ import "../App.style.scss";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "./footer-section/footer.component";
-// import swal from "sweetalert";
+
 
 const Contact = () => {
   const [userName, setUserName] = useState("");
@@ -11,20 +11,25 @@ const Contact = () => {
   const [email, setemail] = useState("");
   const [checkBox, setCheckbox] = useState(false);
   const [error, seterror] = useState(false);
+  const [successMsg, setSuccessMsg] = useState(false);
   const navigate = useNavigate();
 
-
-  const handleSubmit = async () => {
-    if(userName === "" || LastName === "" || message === "" || checkBox === false || email === ""){
+  var pattern =/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if(userName === "" || LastName === "" || message === "" || checkBox === false || email === "" || email != email.match(pattern)){
         seterror(true)
+        console.log(error)
     }else{
-        alert("Your message was successfully submitted")
-        navigate("/")
+         setSuccessMsg(true)
     }
- 
   };
-  
-
+  const checkHandler = ()=> {
+    setCheckbox(!checkBox)
+  }
+  const HandleSuccessMsg =()=>{
+    navigate("/")
+  }
   return (
     <section className="Contact-section">
       <div className="Contact-section--containner">
@@ -34,12 +39,13 @@ const Contact = () => {
                     Hi there, contact me to ask me about anything you have in mind.
                 </p>
             </div>
-            <div className="form-section">
-                <div className="name-section">
+            <form className="form-section">
+                <div className="formField--section">
                     <label id="first_name--label"> First Name 
                         <input id="first_name"
                             type="text"
                             placeholder="Enter your first Name"
+                            required
                             onChange={(e) => {
                             setUserName(e.target.value);}}
                         />
@@ -52,6 +58,7 @@ const Contact = () => {
                             id="last_name"
                             type="text"
                             placeholder="Enter your last Name"
+                            required
                             onChange={(e) => {
                             setLastName(e.target.value);}}
                         />
@@ -63,6 +70,7 @@ const Contact = () => {
                         id="email"
                         type="email"
                         placeholder="Yourname@email.com"
+                        required
                         onChange={(e) => {
                          setemail(e.target.value);}}
                     />
@@ -75,6 +83,7 @@ const Contact = () => {
                         rows="720px"
                         cols="132px"
                         name="comment"
+                        required
                         placeholder="Send me a message and I'll reply you as soon as possible..."
                         onChange={(e) => {
                         setMessage(e.target.value);}}
@@ -83,18 +92,26 @@ const Contact = () => {
                 {error && <div className="error-msg--message">please enter message</div>}
                 <input id="checkbox"
                     type="checkbox"
-                    onChange={(e) => {
-                    setCheckbox(true);}}
+                    checked={checkBox}
+                    onChange={checkHandler}
                     required
                 />
                  <label id="checkbox--label" htmlFor="checkbok">You agree to providing your data to morbor who may contact you.</label>
                 <button id="btn__submit" onClick={handleSubmit}>
                     Send message
                 </button>
-            </div>
+            </form>
         </div>
       <div className="empty"></div>
       <Footer />
+      {successMsg ? <div className="successMessage">
+        <h4 className="successMessage--text">
+        Thank You!
+        </h4>
+        <p className="successMessage--subtext">Message delivered successfully.</p>
+        <button className="successMessage--btn" onClick={HandleSuccessMsg}>ok</button>
+      </div> : ""}
+      
     </section>
   );
 };
