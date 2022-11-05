@@ -74,7 +74,7 @@ const Contact = () => {
                         onChange={(e) => {
                          setemail(e.target.value);}}
                     />
-                   {error && <div className="error-msg">Please enter your email</div>}
+                   {error && <div className="error-msg">Please enter valid email</div>}
                </label>
                 
                 <label id="message--label"> Massage <br/>

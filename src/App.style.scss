@@ -390,4 +390,14 @@ label{
     .formField--section{
         display: block;
     }
+    .successMessage{
+        left:12%;
+        height: 7.5rem;
+        width: 18rem;
+
+        &--btn{
+            left:75%;
+            top:8%;
+        }
+    }
 }
