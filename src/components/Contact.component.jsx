@@ -5,7 +5,7 @@ import Footer from "./footer-section/footer.component";
 
 
 const Contact = () => {
-  const [userName, setUserName] = useState("");
+  const [FirstName, setFirstName] = useState("");
   const [LastName, setLastName] = useState("");
   const [message, setMessage] = useState("");
   const [email, setemail] = useState("");
@@ -17,11 +17,10 @@ const Contact = () => {
   var pattern =/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if(userName === "" || LastName === "" || message === "" || checkBox === false || email === "" || email != email.match(pattern)){
-        seterror(true)
-        console.log(error)
-    }else{
-         setSuccessMsg(true)
+    if(FirstName === "" || LastName === "" || message === "" || checkBox === false || email === "" || email != email.match(pattern)){
+        seterror(true);
+    } else{
+        setSuccessMsg(true);
     }
   };
   const checkHandler = ()=> {
@@ -47,12 +46,10 @@ const Contact = () => {
                             placeholder="Enter your first Name"
                             required
                             onChange={(e) => {
-                            setUserName(e.target.value);}}
+                            setFirstName(e.target.value);}}
                         />
-                          {error && <div className="error-msg">Please enter your First Name</div>}
-                     
+                         {error && <div className="error-msg">Please enter your First Name</div>}
                     </label>
-                  
                     <label id="last_name--label">Last Name <br />
                         <input
                             id="last_name"
