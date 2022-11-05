@@ -12,14 +12,26 @@ const Contact = () => {
   const [checkBox, setCheckbox] = useState(false);
   const [error, seterror] = useState(false);
   const [successMsg, setSuccessMsg] = useState(false);
+  const [FirstNameError, setFirstNameError]=useState(false);
+  const [LastNameError, setLastNameError]=useState(false);
+  const [messageError, setMessageError]=useState(false);
+  const [emailError, setEmailerror]=useState(false);
   const navigate = useNavigate();
 
   var pattern =/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if(FirstName === "" || LastName === "" || message === "" || checkBox === false || email === "" || email != email.match(pattern)){
-        seterror(true);
-    } else{
+    if(FirstName === ""){
+        setFirstNameError(true)
+    }else if(LastName === ""){
+        setLastNameError(true)
+    }else if(message === ''){
+        setMessageError(true)
+    }else if (checkBox === false){
+        seterror(true)
+    }else if(email === "" || email != email.match(pattern)){
+        setEmailerror(true)
+    }else{
         setSuccessMsg(true);
     }
   };
@@ -48,7 +60,7 @@ const Contact = () => {
                             onChange={(e) => {
                             setFirstName(e.target.value);}}
                         />
-                         {error && <div className="error-msg">Please enter your First Name</div>}
+                         {FirstNameError && <div className="error-msg">Please enter your First Name</div>}
                     </label>
                     <label id="last_name--label">Last Name <br />
                         <input
@@ -59,7 +71,7 @@ const Contact = () => {
                             onChange={(e) => {
                             setLastName(e.target.value);}}
                         />
-                         {error && <div className="error-msg">Please enter your Last Name</div>}
+                         {LastNameError && <div className="error-msg">Please enter your Last Name</div>}
                     </label>
                 </div>
                 <label id="email--label"> Email 
@@ -71,7 +83,7 @@ const Contact = () => {
                         onChange={(e) => {
                          setemail(e.target.value);}}
                     />
-                   {error && <div className="error-msg">Please enter valid email</div>}
+                   {emailError && <div className="error-msg">Please enter valid email</div>}
                </label>
                 
                 <label id="message--label"> Massage <br/>
@@ -86,7 +98,7 @@ const Contact = () => {
                         setMessage(e.target.value);}}
                     />
                 </label>
-                {error && <div className="error-msg--message">please enter message</div>}
+                {messageError && <div className="error-msg--message">please enter message</div>}
                 <input id="checkbox"
                     type="checkbox"
                     checked={checkBox}
