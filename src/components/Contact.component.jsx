@@ -10,7 +10,7 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [email, setemail] = useState("");
   const [checkBox, setCheckbox] = useState(false);
-  const [error, seterror] = useState(false);
+  const [error, seterror] = useState(true);
   const [successMsg, setSuccessMsg] = useState(false);
   const [FirstNameError, setFirstNameError]=useState(false);
   const [LastNameError, setLastNameError]=useState(false);
@@ -25,12 +25,12 @@ const Contact = () => {
         setFirstNameError(true)
     }else if(LastName === ""){
         setLastNameError(true)
+    }else if(email === "" || email != email.match(pattern)){
+        setEmailerror(true)
     }else if(message === ''){
         setMessageError(true)
     }else if (checkBox === false){
         seterror(true)
-    }else if(email === "" || email != email.match(pattern)){
-        setEmailerror(true)
     }else{
         setSuccessMsg(true);
     }
@@ -106,6 +106,7 @@ const Contact = () => {
                     required
                 />
                  <label id="checkbox--label" htmlFor="checkbok">You agree to providing your data to morbor who may contact you.</label>
+                 {error && <div className="error-msg--checkbox">checkbok should be clicked </div>}
                 <button id="btn__submit" onClick={handleSubmit}>
                     Send message
                 </button>

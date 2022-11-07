@@ -208,6 +208,13 @@ display: flex;
     margin-top: -2.5rem;
     margin-bottom: 2.5rem;
 }
+.error-msg--checkbox{
+    color: red;
+    font-size: .8rem;
+    font-family: $Main-font;
+    position: absolute;
+    top:90%
+}
 .error-msg--message{
     margin-top: -1.2rem;
     margin-bottom: 1.2rem;
@@ -301,6 +308,9 @@ label{
         width: 18.7rem;
 
     }
+    .error-msg--checkbox{
+        top:66.5%
+    }
 }
 @media (max-width:56.25em){
     .MainSection{
@@ -343,6 +353,9 @@ label{
     }
     .successMessage{
         left:20%;
+    }
+    .error-msg--checkbox{
+        top:66.5%
     }
    }
 @media (max-width:37.5em){
@@ -402,5 +415,8 @@ label{
             left:75%;
             top:8%;
         }
+    }
+    .error-msg--checkbox{
+        top:84%
     }
 }
